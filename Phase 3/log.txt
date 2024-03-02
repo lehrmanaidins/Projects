@@ -1,0 +1,11 @@
+Exception in thread Thread-7:
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/threading.py", line 954, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.9/threading.py", line 892, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3/dist-packages/pitop/camera/camera.py", line 298, in __process_camera_output
+    self.on_frame(self.__get_processed_current_frame())
+  File "/home/pi/Desktop/Projects/Phase 3/main.py", line 43, in is_object_grabbable
+    if (robot_has_object_in_arms):
+NameError: name 'robot_has_object_in_arms' is not defined

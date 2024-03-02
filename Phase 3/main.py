@@ -27,7 +27,7 @@ MINOR_ANGLE_RANGE: float = 2.0
 OBJECT_CLOSE_ARMS_AREA: float = 23_500.0
 
 RED_CONTOUR_AREA: float = 12_500.0
-ORANGE_CONTOUR_AREA: float = 12_500.0 #Gonna have to alter this depending on the orange area, probaby gonna be higher bc orange area is bigger
+ORANGE_CONTOUR_AREA: float = 12_500.0 #Gonna have to alter this depending on the orange area, probaby gonna be higher bc orange area is bigger  
 
 robot = Pitop()
 robot.add_component(DriveController(left_motor_port = "M0", right_motor_port = "M3"))
@@ -69,7 +69,7 @@ def is_object_grabbable(frame):
         sleep(1.0)
         robot.drive.right(0.25) # Robot turns away as to not detect the red objects on orange block
         sleep(1.0) #Edit this time to get it at a 90 degree turn so it can look for more red
-        robot.drove.stop_rotation()
+        robot.drive.stop_rotation()
         robot.camera.on_frame = drive_to_orange
 
         # Close servos to grab object
