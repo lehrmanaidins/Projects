@@ -61,14 +61,16 @@ def is_object_grabbable(frame):
 
     contour_area = cv2.contourArea(line_contour)
     if (contour_area > RED_CONTOUR_AREA):
-
-        robot.pincers.open(speed = 50, angle = 60)
+        robot.drive.backward(0.1)
+        sleep(0.25)
+        robot.drive.stop()
+        robot.pincers.close(speed = 50, angle = 60)
         robot.drive.backward(0.25)
         sleep(1.0)
         robot.drive.right(0.25) # Robot turns away as to not detect the red objects on orange block
         sleep(1.0) #Edit this time to get it at a 90 degree turn so it can look for more red
         robot.drove.stop_rotation()
-        robot.camera.on_frame = is_object_grabbable
+        robot.camera.on_frame = drive_to_orange
 
         # Close servos to grab object
         # Set some boolean value to true, which then makes the robot look for the oraneg block and drives towards that and opens arms.
