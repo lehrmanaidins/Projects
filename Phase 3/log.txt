@@ -6,6 +6,4 @@ Traceback (most recent call last):
     self._target(*self._args, **self._kwargs)
   File "/usr/lib/python3/dist-packages/pitop/camera/camera.py", line 298, in __process_camera_output
     self.on_frame(self.__get_processed_current_frame())
-  File "/home/pi/Desktop/Projects/Phase 3/main.py", line 43, in is_object_grabbable
-    if (robot_has_object_in_arms):
-NameError: name 'robot_has_object_in_arms' is not defined
+TypeError: drive_to_orange() takes 0 positional arguments but 1 was given

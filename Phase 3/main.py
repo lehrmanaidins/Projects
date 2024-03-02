@@ -37,11 +37,7 @@ led_left = LED("D3")
 led_right = LED("D4")
 # buzzer = Buzzer("D0")
 
-def is_object_grabbable(frame):
-    global robot_has_object_in_arms
-    
-    if (robot_has_object_in_arms):
-        return 
+def is_object_grabbable(frame): 
     
     frame = ImageFunctions.convert(frame, format="OpenCV")
 
